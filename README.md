@@ -1,2 +1,7 @@
 # springboot-quickstart-002
-Springboot整合Logback和MyBatis
+
+> **本demo涉及的知识：**
+> * Springboot 
+> * Logback 
+> * MyBatis
+> * MySQL

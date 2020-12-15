@@ -3,7 +3,7 @@ package com.lb.springboot.config.datasource;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 /**
  * 
@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
  * @author lb
  *
  */
-@Configuration
+@Component
 @AutoConfigureAfter(MybatisDataSourceConfig.class)
 public class MybatisMapperScanerConfig {
 	

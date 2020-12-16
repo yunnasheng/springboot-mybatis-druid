@@ -18,31 +18,31 @@ import org.springframework.core.io.support.ResourcePatternResolver;
  * @author lb
  *
  */
-@Configuration
+//@Configuration
 public class MybatisDataSourceConfig {
-	
-	@Autowired
-	private DataSource dataSource;
-	
-	@Bean(name="sqlSessionFactory")
-	public SqlSessionFactory sqlSessionFactoryBean() {
-		SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
-		bean.setDataSource(dataSource);
-		ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		try {
-			// 添加mybatis mapping文件的目录
-			bean.setMapperLocations(resolver.getResources("classpath:com/lb/springboot/mapping/*.xml"));
-			SqlSessionFactory sqlSessionFactory = bean.getObject();
-			sqlSessionFactory.getConfiguration().setCacheEnabled(Boolean.TRUE);
-			return sqlSessionFactory;
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	@Bean
-	public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
-		return new SqlSessionTemplate(sqlSessionFactory);
-	}
+//
+//	@Autowired
+//	private DataSource dataSource;
+//
+//	@Bean(name="sqlSessionFactory")
+//	public SqlSessionFactory sqlSessionFactoryBean() {
+//		SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+//		bean.setDataSource(dataSource);
+//		ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+//		try {
+//			// 添加mybatis mapping文件的目录
+//			bean.setMapperLocations(resolver.getResources("classpath*:com/lb/springboot/mapping/*.xml"));
+//			SqlSessionFactory sqlSessionFactory = bean.getObject();
+//			sqlSessionFactory.getConfiguration().setCacheEnabled(Boolean.TRUE);
+//			return sqlSessionFactory;
+//		} catch (Exception e) {
+//			throw new RuntimeException(e);
+//		}
+//	}
+//
+//	@Bean
+//	public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
+//		return new SqlSessionTemplate(sqlSessionFactory);
+//	}
 
 }

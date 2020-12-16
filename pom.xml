@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lb.springboot</groupId>
-	<artifactId>springboot-quickstart-002</artifactId>
+	<artifactId>springboot-mybatis-druid</artifactId>
 	<version>1.0.0</version>
-	<name>springboot-quickstart-002</name>
+	<name>springboot-mybatis-druid</name>
 
 	<properties>
 		<!-- 跳过maven的test流程 -->

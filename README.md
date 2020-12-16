@@ -1,12 +1,4 @@
-# springboot-quickstart-002
-
-> **本demo涉及的知识：**
-> * Springboot 
-> * Logback 
-> * MyBatis
-> * MySQL
-
-* 建表语句
+# 
 
 ```
 -- 创建表 -- 
